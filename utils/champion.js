@@ -14,10 +14,12 @@ export const champion = () => {
         alert("player is the champion");
         restart();
         return;
+
     };
     if (cScore === 10 || cScore >= 10) {
         alert("computer is the champion");
         restart();
         return;
+        
     };
 };
