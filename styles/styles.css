@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 41, 68);
+    font-family: sans-serif;
+    gap: 50px;
+    height: 100vh;
+}
+
+.scores {
+    color: rgb(224, 224, 224);
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scores h2 {
+    font-size: 30px;
+}
+
+.scores p {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h1 {
+    color: rgb(224, 224, 224);
+    text-align: center;
+    font-size: 50px;
+}
+
+.hands {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+}
+
+.hands img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 350px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.hands .player {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.hands_backwards img {
+    width: 300px;
+    transition: 1s;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: all;
+    transition: 1s;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+}
+
+.choices button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    background: rgb(45, 117, 96);
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* ANIMATIONS */
+
+@keyframes move_up_down {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
